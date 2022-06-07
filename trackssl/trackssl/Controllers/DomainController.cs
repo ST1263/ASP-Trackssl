@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using trackssl.Data;
 using trackssl.Service;
 using trackssl.ViewModel;
@@ -37,9 +34,9 @@ namespace trackssl.Controllers
         [HttpPost]
         [Route("AddDomain")]
         public IActionResult AddDomain([FromBody] DomainVM domain)
-        {
+        {   
             try
-            {
+            {   
                 _repo.AddDomain(domain);
                 return StatusCode(StatusCodes.Status200OK, new Response { Status = "Success", Message = "Domain Added Successfully!" });
             }

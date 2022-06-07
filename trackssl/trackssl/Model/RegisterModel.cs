@@ -21,6 +21,7 @@ namespace trackssl.Data
         [Required(ErrorMessage = "Company is required")]
         public string Company { get; set; }
         [Required(ErrorMessage = "Password is required")]   
+
         public string Password { get; set; }
     }
 }

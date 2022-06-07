@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using trackssl.Data;
 
 namespace trackssl.Migrations.TrackSSLDB
 {
     [DbContext(typeof(TrackSSLDBContext))]
-    partial class TrackSSLDBContextModelSnapshot : ModelSnapshot
+    [Migration("20220607054157_Updatemodel")]
+    partial class Updatemodel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -9,5 +9,6 @@ namespace trackssl.ViewModel
     {
         public int DomainID { get; set; }
         public string DomainName { get; set; }
+        public DateTime CreatedAT { get; set; }
     }
 }
