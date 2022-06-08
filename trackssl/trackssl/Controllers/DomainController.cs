@@ -37,6 +37,9 @@ namespace trackssl.Controllers
         {   
             try
             {   
+                if(_repo.isDomainExists(domain))
+                    return StatusCode(StatusCodes.Status404NotFound, new Response { Status = "Failed", Message = "Domain Already Exits!" });
+
                 _repo.AddDomain(domain);
                 return StatusCode(StatusCodes.Status200OK, new Response { Status = "Success", Message = "Domain Added Successfully!" });
             }

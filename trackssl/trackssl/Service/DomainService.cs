@@ -20,6 +20,10 @@ namespace trackssl.Service
             return _service.DomainList().ToList();
         }
 
+        public bool isDomainExists(DomainVM domain)
+        {
+            return _service.isDomainExists(domain);
+        }
         public Domain AddDomain(DomainVM domainVM)
         {
             Domain domain = new Domain()

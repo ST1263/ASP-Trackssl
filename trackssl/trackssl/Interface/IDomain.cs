@@ -7,6 +7,7 @@ namespace trackssl.Interface
     public interface IDomain
     {
         public List<DomainVM> DomainList();
+        public bool isDomainExists(DomainVM domain);
         public Domain AddDomain(Domain domain);
         public Domain UpdateDomain(Domain domain);
         public void DeleteDomain(int domainId);
